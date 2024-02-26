@@ -1,0 +1,230 @@
+<!--
+  Copyright 2018 The Distill Template Authors
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!doctype html>
+
+<head>
+  <script src="template.v2.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf8">
+</head>
+
+<body>
+<h1 style="text-align:center; font-size: 50px; margin-bottom:-1.5cm;">The Craftax Benchmark</h1>
+<!--  <distill-header></distill-header>-->
+<d-front-matter>
+  <script id='distill-front-matter' type="text/json">{
+    "title": "",
+    "description": "",
+    "published": "Feb 19, 2024",
+    "authors": [
+      {
+        "author":"Michael Matthews",
+        "authorURL":"https://mtmatthews.com/",
+        "affiliations": [{"name": "University of Oxford"}]
+      },
+      {
+        "author":"Michael Beukman",
+        "authorURL":"https://michaelbeukman.com/",
+        "affiliations": [{"name": "University of Oxford"}]
+      },
+      {
+        "author":"Benjamin Ellis",
+        "authorURL":"https://scholar.google.com/citations?user=NPEI4IsAAAAJ&hl=en/",
+        "affiliations": [{"name": "University of Oxford"}]
+      },
+      {
+        "author":"Mikayel Samvelyan",
+        "authorURL":"https://samvelyan.com/",
+        "affiliations": [{"name": "University College London"}]
+      },
+      {
+        "author":"Matthew Jackson",
+        "authorURL":"https://matthewtjackson.com/",
+        "affiliations": [{"name": "University of Oxford"}]
+      },
+      {
+        "author":"Samuel Coward",
+        "authorURL":"https://scholar.google.com/citations?user=-0_t2_EAAAAJ&hl=en",
+        "affiliations": [{"name": "University of Oxford"}]
+      },
+      {
+        "author":"Jakob Foerster",
+        "authorURL":"https://www.jakobfoerster.com/",
+        "affiliations": [{"name": "University of Oxford"}]
+      }
+    ],
+    "katex": {
+      "delimiters": [
+        {"left": "$$", "right": "$$", "display": false}
+      ]
+    }
+  }
+  </script>
+</d-front-matter>
+<d-title>
+  <h2 style="grid-column: page; text-align: left">Authors</h2>
+  <div class="row" style="grid-column: page; display:flex; justify-content: space-between; text-align:center; margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><a href="https://mtmatthews.com/"><img style="width:200px" src="res/mikey.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Matthews<sup>1</sup></figcaption></d-figure>
+      <p style="margin-top: 5cm; color:white"></p>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://michaelbeukman.com/"><img style="width:200px" src="res/michael.gif"></a> <figcaption style="margin-top:-5cm; color:white">Michael Beukman<sup>1</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://twitter.com/benjamin_ellis3"><img style="width:200px" src="res/ben.gif"></a> <figcaption style="margin-top:-5cm; color:white">Benjamin Ellis<sup>1,2</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://samvelyan.com/"><img style="width:200px" src="res/craftax_long.gif"></a> <figcaption style="margin-top:-5cm; color:white">Mikayel Samvelyan<sup>3</sup></figcaption></d-figure>
+    </div>
+  </div>
+  <div class="row" style="grid-column: page; display:flex; justify-content: space-around; text-align:center;  margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><a href="https://matthewtjackson.com/"><img style="width:200px" src="res/matt.gif"></a> <figcaption style="margin-top:-5cm; color:white">Matthew Jackson<sup>1,2</sup></figcaption></d-figure>
+      <p style="margin-top: 5cm; color:white"></p>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://dramacow.github.io/"><img style="width:200px" src="res/sam.gif"></a> <figcaption style="margin-top:-5cm; color:white">Samuel Coward<sup>1</sup></figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><a href="https://www.jakobfoerster.com/"><img style="width:200px" src="res/jakob.gif"></a> <figcaption style="margin-top:-5cm; color:white">Jakob Foerster<sup>1</sup></figcaption></d-figure>
+    </div>
+  </div>
+  <p style="text-align:center; font-size: 14px;">
+    <sup>1</sup> <a href="https://foersterlab.com/">FLAIR</a>, University of Oxford &nbsp;&nbsp;
+    <sup>2</sup> <a href="https://whirl.cs.ox.ac.uk/">WhiRL</a>, University of Oxford &nbsp;&nbsp;
+    <sup>3</sup> <a href="https://ucldark.com/">DARK</a>, University College London
+  </p>
+</d-title>
+<d-article>
+  <div class="row" style="display:flex; justify-content: space-around; text-align:center;  margin-bottom:1cm;">
+    <div class="column">
+      <a href="https://foersterlab.com/">arXiv</a>
+    </div>
+    <div class="column">
+      <a href="https://github.com/MichaelTMatthews/Craftax">GitHub</a>
+    </div>
+    <div class="column">
+      <a href="https://foersterlab.com/">Docs</a>
+    </div>
+  </div>
+</d-article>
+<d-article>
+  <a class="marker" href="#section-1" id="section-1"><span>1</span></a>
+  <h1>Introduction</h1>
+  <p>Progress in reinforcement learning (RL) algorithms is driven in large part by the development and adoption of suitable
+  benchmarks. In the effort towards increasingly general agents, there has arisen
+  a community focused on benchmarks that exhibit more open-ended dynamics<d-cite bibtex-key="stanley2017open"></d-cite>, in the form of
+  procedural world generation, skill acquisition and reuse, long term dependencies and continual learning. This has
+  motivated the development of environments like MALMO<d-cite bibtex-key="johnson2016malmo"></d-cite> (Minecraft), The NetHack Learning Environment<d-cite bibtex-key="nle2020kuttler"></d-cite>,
+  MiniHack<d-cite bibtex-key="minihack2021samvelyan"></d-cite> and Crafter<d-cite bibtex-key="hafner2021benchmarking"></d-cite>. However, slow runtime has rendered
+  them inaccessible to current methods without large-scale computational resources, limiting their practicality to the
+  research community.</p>
+
+
+  <p>
+    We present Craftax, a JAX-based benchmark that combines elements from Crafter and NetHack, while running orders of magnitude faster.
+    We also present Craftax-Classic, a reimplementation of Crafter in JAX that is significantly simpler than the full Craftax environment,
+    but will provide a starting point for those familiar with Crafter.
+  </p>
+
+  <a class="marker" href="#section-2" id="section-2"><span>2</span></a>
+  <h1>Craftax is <i>Fast</i></h1>
+    <p>Craftax is significantly faster than comparable open-ended environments.</p>
+    <figure style="width:100%;"><img src="res/speed_comparison_bar_h.png"
+                                                          style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
+      </figure>
+    <p>
+      Craftax-Classic and Craftax run 257x and 169x faster than Crafter respectively when running the PureJaxRL<d-cite bibtex-key="lu2022discovered"></d-cite> PPO implementation.
+      All experiments were run on a single machine with an RTX 4090 and i9-13900K.
+      Looking deeper into the results we can see that the main reason for the speed of Craftax is that it can be massively
+      parallelised.  This is made possible by JAX, which lets us compile down Craftax to be run on the GPU and vmap over many workers.
+    </p>
+    <figure style="width:100%;"><img src="res/speed_comparison.png"
+                                                        style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
+    </figure>
+
+  <a class="marker" href="#section-3" id="section-3"><span>3</span></a>
+  <h1>Craftax is <i>Hard</i></h1>
+  <p>
+    Craftax contains 65 achievements split into 4 difficulties.  Achievements with higher difficulty give more reward.
+    Current RL methods failed to make significant progress when given a budget of 1 billion environment steps, with no instances of the two hardest classes of achievement being reached.
+    For perspective, it took one of the authors (with extensive knowledge of the game mechanics) roughly 5 hours of gameplay to first achieve a `perfect' run where every achievement was completed.
+  </p>
+  <figure style="width:100%;"><img src="res/achievement_bar_chart.png"
+                                                        style="width:100%; border: 1px solid rgba(0, 0, 0, 0.2);"/>
+    </figure>
+  <a class="marker" href="#section-4" id="section-4"><span>4</span></a>
+
+
+  <h1>Craftax is <i>Open-Ended</i></h1>
+  <p>
+    Craftax contains a diverse range of different skills and tasks to perform.
+  </p>
+  <div class="row" style="display:flex; justify-content: space-between; text-align:center; margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><img style="width:200px" src="res/mining.gif"> <figcaption>Mining</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="res/farming.gif"> <figcaption>Farming</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="res/dungeon_crawling.gif"> <figcaption>Dungeon Crawling</figcaption></d-figure>
+    </div>
+  </div>
+  <div class="row" style="display:flex; justify-content: space-between; text-align:center;  margin-bottom:1cm;">
+    <div class="column">
+      <d-figure><img style="width:200px" src="res/archery.gif"> <figcaption>Archery</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="res/building.gif"> <figcaption>Building</figcaption></d-figure>
+    </div>
+    <div class="column">
+      <d-figure><img style="width:200px" src="res/magic.gif"> <figcaption>Magic</figcaption></d-figure>
+    </div>
+  </div>
+
+  <p>
+    This makes it an excellent testbed for methods like exploration, continual learning and unsupervised skill discovery.
+  </p>
+  <p>
+    Craftax can also be used for unsupervised environment design<d-cite bibtex-key="dennis2020Emergent"></d-cite>.
+    This could be in the form of curating promising seeds with Prioritized Level Replay<d-cite bibtex-key="jiang2020Prioritized"></d-cite>.
+  </p>
+  <d-figure><img style="width:100%;" src="res/plr.png"> <figcaption style="text-align:center;">PLR Levels</figcaption></d-figure>
+  <p>Or through evolving levels with ACCEL<d-cite bibtex-key="holder2022Evolving"></d-cite>.</p>
+<!--  <d-figure><img style="width:100%;" src="res/accel_noise.png"> <figcaption style="text-align:center;">ACCEL (noise editing)</figcaption></d-figure>-->
+<!--  <d-figure><img style="width:100%;" src="res/accel_rswap.png"> <figcaption style="text-align:center;">ACCEL (restricted swap editing)</figcaption></d-figure>-->
+  <d-figure><img style="width:100%;" src="res/accel_uswap.png"> <figcaption style="text-align:center;">ACCEL (unrestricted swap editing)</figcaption></d-figure>
+
+  <h1>TL;DR</h1>
+  <p>
+    Existing benchmarks for open-ended learning are either too slow or too simple.
+    Craftax is both extremely fast and very complicated.
+    We hope that this will allow researchers without access to industrial compute to investigate
+    learning in an open-ended environment with an ease that was not previously possible.
+    We look forward to seeing what the community does with this new tool!
+  </p>
+
+</d-article>
+
+<d-appendix>
+  <d-bibliography src="bibliography.bib"></d-bibliography>
+</d-appendix>
+
+<!--  <distill-footer></distill-footer>-->
+
+</body>
